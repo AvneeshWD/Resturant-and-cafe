@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Pisces by Senani – Raebareli</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<body>
+    
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#hero" style="display:flex; align-items:center; gap:0.6rem;">
+    <img src="logo.jpg" alt="Logo" style="width:36px; height:36px; border-radius:50%; object-fit:cover;">
+    <span>Pisces <span>&</span> Senani</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#visit">Visit</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <svg class="hero-fish" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="180" cy="150" rx="160" ry="90" fill="white"/>
+    <ellipse cx="320" cy="120" rx="50" ry="30" fill="white" transform="rotate(30 320 120)"/>
+    <ellipse cx="320" cy="180" rx="50" ry="30" fill="white" transform="rotate(-30 320 180)"/>
+    <circle cx="80" cy="130" r="12" fill="#0e0b06"/>
+  </svg>
+  <div class="hero-content">
+    <div class="hero-tag">🐟 &nbsp; Raebareli's Signature Dining &nbsp; 🐟</div>
+    <h1 class="hero-title">
+      Pisces<br/><em>by Senani</em>
+    </h1>
+    <p class="hero-sub">Restaurant &amp; Café · Raebareli, U.P.</p>
+
+    <!-- banner -->
+<div class="booking-card">
+    <p>🎉 Hall Available for Birthdays & Corporate Events</p>
+
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfRvv-6AqfAQxV2eKFfs8zvihLzg3Xy1OvEO42r6myzlHB8yg/viewform?usp=publish-editor" target="_blank">
+        Check Availability
+    </a>
+</div>
+
+    <div class="hero-btns">
+      <a href="#menu" class="btn-gold">Explore Menu</a>
+      <a href="#visit" class="btn-outline">Find Us</a>
+    </div>
+  </div>
+  <!-- <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div> -->
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-visual">
+    <img src="https://images.jdmagicbox.com/v2/comp/raebareli/a3/9999px535.x535.241207034003.e8a3/catalogue/the-pisces-restaurant-by-sennani-krishna-nagar-raebareli-indian-restaurants-eabn8d85xb.jpg" alt="Pisces by Senani" class="about-cover" style="width:100%; height:100%; object-fit:cover;">
+    <div style="position:absolute; bottom:1rem; right:1rem; background:rgba(255,255,255,0.9); padding:.5rem 1rem; border-radius:2px; font-size:.8rem; letter-spacing:.1em; text-transform:uppercase; color:var(--deep); font-weight:500;">Est. in Raebareli</div>
+  </div>
+  <div>
+    <p class="about-label">Our Story</p>
+    <h2 class="about-title">Where every meal<br/>feels like <em>home</em></h2>
+    <p class="about-text">
+      Pisces by Senani is Raebareli's beloved dining destination — a place where vibrant flavours meet warm
+      hospitality. Nestled on Manika Cinema Road, we bring you an all-you-can-eat experience that celebrates
+      the richness of Indian cuisine alongside refreshing café delights.
+    </p>
+    <p class="about-text">
+      Whether you're gathering with family around our fireplace on a cool evening or enjoying a leisurely
+      afternoon on our outdoor terrace, every visit is crafted to be memorable. Come hungry, leave happy.
+    </p>
+    <div class="price-badge">
+      💰 &nbsp; ₹200 – ₹400 per person &nbsp; · &nbsp; All You Can Eat
+    </div>
+    <div class="about-badges">
+      <span class="badge">🍽️ All You Can Eat</span>
+      <span class="badge">🌿 Outdoor Seating</span>
+      <span class="badge">🔥 Fireplace</span>
+      <span class="badge">🥡 Takeaway Available</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider">✦ &nbsp; ✦ &nbsp; ✦</div>
+
+<!-- MENU -->
+<section id="menu">
+  <div class="section-header">
+    <span class="section-label">What We Serve</span>
+    <h2 class="section-title">Our Menu</h2>
+  </div>
+
+  <div class="menu-tabs">
+    <button class="tab active" onclick="filterMenu('starters', this)">Starters</button>
+    <button class="tab" onclick="filterMenu('mains', this)">Main Course</button>
+    <button class="tab" onclick="filterMenu('breads', this)">Breads & Rice</button>
+    <button class="tab" onclick="filterMenu('cafe', this)">Café</button>
+    <button class="tab" onclick="filterMenu('desserts', this)">Desserts</button>
+  </div>
+
+  <div class="menu-grid" id="menuGrid"></div>
+  <p class="menu-note">* All prices inclusive of taxes. Menu subject to seasonal change.</p>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-header">
+    <span class="section-label">Crafted for You</span>
+    <h2 class="section-title dark">The Pisces Experience</h2>
+  </div>
+  <div class="exp-grid">
+    <div class="exp-card">
+      <div class="exp-icon">🍛</div>
+      <h3 class="exp-title">All You Can Eat</h3>
+      <p class="exp-text">Unlimited servings of fresh Indian delicacies, prepared daily with authentic spices and recipes passed down through generations.</p>
+    </div>
+    <div class="exp-card">
+      <div class="exp-icon">🌿</div>
+      <h3 class="exp-title">Outdoor Seating</h3>
+      <p class="exp-text">Breathe in the open air on our beautifully arranged outdoor terrace — perfect for family gatherings, casual lunches, and evening outings.</p>
+    </div>
+    <div class="exp-card">
+      <div class="exp-icon">🔥</div>
+      <h3 class="exp-title">Fireplace Evenings</h3>
+      <p class="exp-text">Gather around our warm fireplace during winter evenings. There's no better setting for a hearty meal and good conversation.</p>
+    </div>
+    <div class="exp-card">
+      <div class="exp-icon">⏱️</div>
+      <h3 class="exp-title">Unhurried Dining</h3>
+      <p class="exp-text">Most guests spend 1 to 2.5 hours with us — because great food deserves time. Relax, linger, and enjoy every bite.</p>
+    </div>
+    <div class="exp-card">
+      <div class="exp-icon">☕</div>
+      <h3 class="exp-title">Café Corner</h3>
+      <p class="exp-text">From masala chai to cold coffee, our café menu keeps you refreshed through every course of your meal.</p>
+    </div>
+    <div class="exp-card">
+      <div class="exp-icon">📍</div>
+      <h3 class="exp-title">Central Location</h3>
+      <p class="exp-text">Conveniently located on Manika Cinema Road in Gandhi Nagar, Raebareli — easy to find, hard to forget.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="section-header">
+    <span class="section-label">Guest Voices</span>
+    <h2 class="section-title dark">What Our Guests Say</h2>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"The menu offered a wide variety of options, catering to different tastes — something for everyone!"</p>
+      <p class="review-author">— Google Review</p>
+      <div class="review-quote">"</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★☆</div>
+      <p class="review-text">"Prices are very reasonable for the quality and experience. Great value for an all-you-can-eat spread."</p>
+      <p class="review-author">— Google Review</p>
+      <div class="review-quote">"</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Loved the outdoor seating and the cozy fireplace area. Perfect ambiance for a family dinner."</p>
+      <p class="review-author">— Local Guest</p>
+      <div class="review-quote">"</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★☆</div>
+      <p class="review-text">"Authentic flavours and generous portions. The dal makhani and paneer dishes are absolutely delightful."</p>
+      <p class="review-author">— Satisfied Diner</p>
+      <div class="review-quote">"</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Best all-you-can-eat in Raebareli! We came for lunch and stayed for hours. Will definitely be back."</p>
+      <p class="review-author">— Repeat Visitor</p>
+      <div class="review-quote">"</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★☆</div>
+      <p class="review-text">"Wonderful café drinks and a lovely outdoor seating area. Great spot to unwind after a long day."</p>
+      <p class="review-author">— Café Guest</p>
+      <div class="review-quote">"</div>
+    </div>
+  </div>
+  <div class="rating-banner">
+    <span class="rating-big">4.1★</span>
+    Based on 32+ customer reports · Google &amp; Justdial
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-header">
+    <span class="section-label">A Glimpse</span>
+    <h2 class="section-title dark">Our Gallery</h2>
+  </div>
+  <div class="gallery-grid" id="galleryContainer">
+    <div class="gallery-item featured">
+      <video id="jd-video" controls muted loop autoplay playsinline style="width:100%; height:100%; object-fit:cover;"></video>
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.jdmagicbox.com/v2/comp/raebareli/a3/9999px535.x535.241207034003.e8a3/catalogue/the-pisces-restaurant-by-sennani-krishna-nagar-raebareli-indian-restaurants-3m75cjo81g.jpg" alt="Restaurant Photo" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.jdmagicbox.com/v2/comp/raebareli/a3/9999px535.x535.241207034003.e8a3/catalogue/the-pisces-restaurant-by-sennani-krishna-nagar-raebareli-indian-restaurants-idyasei80r.jpg" alt="Restaurant Photo" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.jdmagicbox.com/v2/comp/raebareli/a3/9999px535.x535.241207034003.e8a3/catalogue/the-pisces-restaurant-by-sennani-krishna-nagar-raebareli-indian-restaurants-kpjnmcxtdt.jpg" alt="Restaurant Photo" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.jdmagicbox.com/v2/comp/raebareli/a3/9999px535.x535.241207034003.e8a3/catalogue/the-pisces-restaurant-by-sennani-krishna-nagar-raebareli-indian-restaurants-hraod2og3y.jpg" alt="Restaurant Photo" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.jdmagicbox.com/v2/comp/raebareli/a3/9999px535.x535.241207034003.e8a3/catalogue/the-pisces-restaurant-by-sennani-krishna-nagar-raebareli-indian-restaurants-4jd0fkehmg.jpg" alt="Restaurant Photo" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.jdmagicbox.com/v2/comp/raebareli/a3/9999px535.x535.241207034003.e8a3/catalogue/the-pisces-restaurant-by-sennani-krishna-nagar-raebareli-indian-restaurants-gl6ifu4lgm.jpg" alt="Restaurant Photo" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.jdmagicbox.com/v2/comp/raebareli/a3/9999px535.x535.241207034003.e8a3/catalogue/the-pisces-restaurant-by-sennani-krishna-nagar-raebareli-indian-restaurants-o3bvbjnivu.jpg" alt="Restaurant Photo" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section id="visit">
+  <div>
+    <p class="about-label">Plan Your Visit</p>
+    <h2 class="visit-title">Find Us in<br/>Raebareli</h2>
+
+    <div class="info-block">
+      <p class="info-label">Address</p>
+      <p class="info-value">Manika Cinema Rd, Gandhi Nagar,<br/>Feroz Gandhi Nagar, Raebareli,<br/>Uttar Pradesh – 229001</p>
+    </div>
+
+    <div class="info-block">
+      <p class="info-label">Phone</p>
+      <p class="info-value">+91 XXXXX XXXXX &nbsp;<span style="color:var(--muted);font-size:.8rem;">(Coming soon)</span></p>
+    </div>
+
+    <div class="info-block">
+      <p class="info-label">Opening Hours</p>
+      <div class="hours-row"><span>Monday – Thursday</span><span>11:00 AM – 11:00 PM</span></div>
+      <div class="hours-row"><span>Friday</span><span>11:00 AM – 11:00 PM</span></div>
+      <div class="hours-row"><span>Saturday</span><span>11:00 AM – 11:00 PM</span></div>
+      <div class="hours-row"><span>Sunday</span><span>11:00 AM – 11:00 PM</span></div>
+    </div>
+
+    <div class="info-block">
+      <p class="info-label">Price Range</p>
+      <p class="info-value">₹200 – ₹400 per person · All You Can Eat</p>
+    </div>
+
+    <div class="info-block">
+      <p class="info-label">Follow Us</p>
+      <p class="info-value">
+        <a href="https://www.instagram.com/pisces_by_senani_raebareli/" target="_blank" style="color:var(--gold);text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem;">
+          <img src="logo.jpg" alt="Instagram Logo" style="width:24px; height:24px; border-radius:50%; object-fit:cover;">
+          <span>@pisces_by_senani_raebareli</span>
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <div>
+    <div class="map-placeholder">
+      <div class="map-icon">📍</div>
+      <p>Manika Cinema Road, Raebareli</p>
+      <a href="https://maps.google.com/?q=Manika+Cinema+Rd+Gandhi+Nagar+Raebareli+Uttar+Pradesh+229001" target="_blank" class="map-link">Open in Google Maps</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo" style="display:flex; flex-direction:column; align-items:center; gap:0.8rem; margin-bottom:0.5rem;">
+    <img src="logo.jpg" alt="Logo" style="width:64px; height:64px; border-radius:50%; object-fit:cover; border: 2px solid var(--gold);">
+    <span>Pisces <span>by</span> Senani</span>
+  </div>
+  <p class="footer-tagline" style="margin-top:1rem;">Restaurant &amp; Café · Raebareli, U.P.</p>
+  <ul class="footer-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#visit">Visit</a></li>
+    <li><a href="https://www.instagram.com/pisces_by_senani_raebareli/" target="_blank">Instagram</a></li>
+  </ul>
+  <p class="footer-copy">© 2025 Pisces by Senani. All rights reserved. · Raebareli, Uttar Pradesh</p>
+  
+ <!-- Whatsapp Button-->
+  <a href="https://wa.me/1234567890" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+  <span>Chat with us</span>
+</a>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script src="script.js"></script>
+</body>
+</html>
